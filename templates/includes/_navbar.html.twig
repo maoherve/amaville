@@ -9,14 +9,29 @@
                 <a class="nav-link" href="{{ path('home') }}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('user_registration') }}">Register</a>
+                <a class="nav-link" href="{{ path('personal_home') }}">Personal home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Disabled</a>
-            </li>
+            {% if app.user %}
+                {% if is_granted("ROLE_ADMIN") %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a>
+                    </li>
+                {% endif %}
+            {% endif %}
+
+
+            {% if app.user %}
+                {% if is_granted("ROLE_USER") %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">Se déconnecter</a>
+                    </li>
+                {% endif %}
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                        </li>
+            {% endif %}
+
         </ul>
     </div>
 </nav>
