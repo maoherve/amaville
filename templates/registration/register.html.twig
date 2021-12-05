@@ -2,13 +2,13 @@
 
 
 {% block main %}
-    <div class="">
+    <div class="container w-50 mt-5">
         {{ form_start (form) }}
         {{ form_row(form.username) }}
         {{ form_row(form.email) }}
         {{ form_row(form.plainPassword.first) }}
         {{ form_row(form.plainPassword.second) }}
-        <button type="submit">Register!</button>
+        <button class="btn btn-primary mt-3" type="submit">Register!</button>
         {{ form_end(form)}}
     </div>
 {% endblock %}
