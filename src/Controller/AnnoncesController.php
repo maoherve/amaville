@@ -24,7 +24,7 @@ class AnnoncesController extends AbstractController
 
         $annoncesRepository = $this->getDoctrine()
             ->getRepository(Annonces::class)
-            ->findBy(['id' => $user]);
+            ->findBy(['user' => $user]);
 
         return $this->render('annonces/index.html.twig', [
             'annonces' => $annoncesRepository,
