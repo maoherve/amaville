@@ -20,9 +20,14 @@ class AnnoncesController extends AbstractController
     #[Route('/', name: 'annonces_index', methods: ['GET'])]
     public function index(AnnoncesRepository $annoncesRepository ): Response
     {
+        $user = $this->getUser();
+
+        $annoncesRepository = $this->getDoctrine()
+            ->getRepository(Annonces::class)
+            ->findBy(['id' => $user]);
 
         return $this->render('annonces/index.html.twig', [
-            'annonces' => $annoncesRepository->findAll(),
+            'annonces' => $annoncesRepository,
         ]);
     }
 
@@ -54,13 +59,6 @@ class AnnoncesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'annonces_show', methods: ['GET'])]
-    public function show(Annonces $annonce): Response
-    {
-        return $this->render('annonces/show.html.twig', [
-            'annonce' => $annonce,
-        ]);
-    }
 
     #[Route('/{id}/edit', name: 'annonces_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Annonces $annonce, EntityManagerInterface $entityManager): Response
