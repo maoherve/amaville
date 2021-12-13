@@ -3,4 +3,13 @@
 
 {% block main %}
 <p>HOME</p>
+
+    {% if app.user %}
+        {{ dump(app.user) }}
+
+        {{ dump(app.user.id) }}
+
+    {% endif %}
+
+
 {% endblock %}
