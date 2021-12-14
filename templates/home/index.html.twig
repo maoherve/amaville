@@ -3,16 +3,20 @@
 
 {% block main %}
 
-    <div class="productCard text-center">
-        {% for annonce in annonces %}
-            <div class=" card m-5" style="width: 20rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ annonce.name }}</h5>
-                    <p class="card-text">{{ annonce.description }}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+    <section class="container">
+        <div class="row  makeupContainer">
+            {% for annonce in annonces %}
+                <div class="homeCard container mt-5">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="">
+                            <h5 class="card-title">{{ annonce.name }}</h5>
+                            <p class="card-text">{{ annonce.description }}</p>
+                        </div>
                 </div>
-            </div>
-        {% endfor %}
-    </div>
+            {% else %}
+                <div class="card-body"><p>Pas de produit disponible dans cette catégorie !</p></div>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
