@@ -2,5 +2,20 @@
 
 
 {% block main %}
-<p>HOME</p>
+
+    <section class="container">
+        <div class="row  makeupContainer">
+            {% for annonce in annonces %}
+                <div class="homeCard container mt-5">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="">
+                            <h5 class="card-title">{{ annonce.name }}</h5>
+                            <p class="card-text">{{ annonce.description }}</p>
+                        </div>
+                </div>
+            {% else %}
+                <div class="card-body"><p>Pas de produit disponible dans cette catégorie !</p></div>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
