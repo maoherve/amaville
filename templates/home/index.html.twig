@@ -2,14 +2,18 @@
 
 
 {% block main %}
-<p>HOME</p>
 
-    {% if app.user %}
-        {{ dump(app.user) }}
-
-        {{ dump(app.user.id) }}
-
-    {% endif %}
-
+    <div class="productCard text-center">
+        {% for annonce in annonces %}
+            <div class=" card m-5" style="width: 20rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ annonce.name }}</h5>
+                    <p class="card-text">{{ annonce.description }}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
