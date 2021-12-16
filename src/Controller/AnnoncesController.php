@@ -40,7 +40,7 @@ class AnnoncesController extends AbstractController
         $annonce = new Annonces();
 
         //id utilisateur
-        $user = $this->getUser();
+        //$user = $this->getUser();
 
 
         $form = $this->createForm(AnnoncesType::class, $annonce);
