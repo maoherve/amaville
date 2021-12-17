@@ -1,15 +1,21 @@
+@import "navbar.scss";
 
 body {
     background-color: #efefef;
 }
 
-
-
-.navbar {
-    background-color: #23aeee;
+.globalContainer {
+    margin-top: 160px;
+    margin-bottom: 50px;
+}
+.loginContainer {
+    margin-top: 240px;
+    margin-bottom: 50px;
 }
 
-.makeupContainer {
+
+
+.adsContainer {
     position: relative;
 
     display: flex;
@@ -18,15 +24,4 @@ body {
     margin-bottom: 50px;
     margin-top: 50px;
 
-}
-
-.homeCard {
-    border-radius: 5px;
-    background-color: #FFFFFFDB !important;
-    box-shadow: 0 5px 15px rgb(60 82 95 / 55%);
-    position: relative;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
 }
