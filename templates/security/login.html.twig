@@ -2,7 +2,7 @@
 
 
 {% block main %}
-        <div class="w-50 mt-5 container container-fluid">
+        <div class="loginContainer w-50  container container-fluid">
             <form method="post">
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>

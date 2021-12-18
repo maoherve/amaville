@@ -91,4 +91,18 @@ class AnnoncesController extends AbstractController
 
         return $this->redirectToRoute('annonces_index', [], Response::HTTP_SEE_OTHER);
     }
+
+
+    #[Route('/lfisanel', name: 'lfisanel', methods: ['GET'])]
+    public function admin(AnnoncesRepository $annoncesRepository ): Response
+    {
+
+        $annoncesRepository = $this->getDoctrine()
+            ->getRepository(Annonces::class)
+            ->findAll();
+
+        return $this->render('annonces/admin_index.html.twig', [
+            'annonces' => $annoncesRepository,
+        ]);
+    }
 }

@@ -2,17 +2,14 @@
 
 
 {% block main %}
-    <section class="container">
-        <div class="row  makeupContainer">
+    <section class="globalContainer container">
+        <div class="row  adsContainer">
             {% for annonce in annonces %}
-
-
-                <div class="card" style="width: 18rem;">
+                <div class="card mt-4" style="width: 18rem;">
                     <img class="card-img-top" src="{{ vich_uploader_asset(annonce, 'imageFile') }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{ annonce.name }}</h5>
                         <p class="card-text">{{ annonce.description }}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             {% else %}
