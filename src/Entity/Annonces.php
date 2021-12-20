@@ -31,7 +31,7 @@ class Annonces
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="annonces")
+     * @ORM\ManyToOne(targetEntity=Utilisateur::class, inversedBy="annonces")
      */
     private $user;
 
@@ -84,12 +84,12 @@ class Annonces
         return $this;
     }
 
-    public function getUser(): ?User
+    public function getUser(): ?Utilisateur
     {
         return $this->user;
     }
 
-    public function setUser(?User $user): self
+    public function setUser(?Utilisateur $user): self
     {
         $this->user = $user;
 
