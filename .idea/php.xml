@@ -138,6 +138,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver 2" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache 2" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem 2" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher 2" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
