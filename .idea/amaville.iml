@@ -141,6 +141,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/form" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/cache 2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem 2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver 2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher 2" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
