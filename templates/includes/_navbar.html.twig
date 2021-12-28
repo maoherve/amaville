@@ -1,23 +1,21 @@
-
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-    <div class="navContainer container-fluid">
-        <a class="logoNavbarContainer navbar-brand mb-4" href="{{ path('home') }}"><span class="logoName">Amaville</span></a>
+<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+    <div class="container-fluid">
+        <a class="logoNavbarContainer navbar-brand" href="{{ path('home') }}"><img class="logoNavbar" src="/./pictures/logo/amaville.png"><span class="logoName"></span></a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navItems navbar-nav">
-
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
                 <a class="navlink nav-link" href="{{ path('home') }}">Acceuil</a>
                 <a class="navlink nav-link" href="{{ path('annonces_index') }}">Mes anonces</a>
 
                 {% if app.user %}
                     {% if is_granted("ROLE_USER") %}
-                            <a class="navlink nav-link" href="{{ path('app_logout') }}">Se déconnecter</a>
+                        <a class="navlink nav-link" href="{{ path('app_logout') }}">Se déconnecter</a>
                     {% endif %}
                 {% else %}
-                        <a class="navlink nav-link" href="{{ path('app_login') }}">Connexion</a>
+                    <a class="navlink nav-link" href="{{ path('app_login') }}">Connexion</a>
                 {% endif %}
             </div>
         </div>

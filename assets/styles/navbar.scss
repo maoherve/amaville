@@ -1,82 +1,26 @@
+
 .navbar {
-  background-color: #23aeee;
+  background-color: rgba(72, 119, 246, 0.94);
+
 }
 
-.logoName {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  color: black;
-  font-size: 32px;
-  letter-spacing: 9px;
-  cursor: pointer;
-  font-family: 'Urbanist', sans-serif;
+.logoNavbarContainer {
+  margin: 0;
+  padding: 0;
 }
-
-@media screen and (max-width: 992px) {
-  .logoName {
-    margin-top: 10px;
-  }
+.logoNavbar {
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  width: auto;
 }
 
 @media screen and (min-width: 992px) {
-
-  .dropdown-menu {
-    border-radius: 15px;
-    box-shadow: 0 5px 12px rgb(60 82 95 / 65%);
-    opacity: 90%;
-    margin-left: 30px;
-  }
-
-  .navbar {
-    height: 130px;
-  }
-
-  .logoName::before {
-    content: "Amaville";
-    position: absolute;
-    color: transparent;
-    background-image: repeating-linear-gradient(
-                    45deg,
-                    transparent 0,
-                    transparent 2px,
-                    white 2px,
-                    white 3px
-    );
-    -webkit-background-clip: text;
-    top: 0px;
-    left: 0;
-    z-index: -1;
-    transition: 1s;
-  }
-
-
-  .logoName:hover:before {
-    top: 16px;
-    left: 10px;
-  }
-
-  .logoName:hover:after {
-    top: -16px;
-    left: -10px;
-  }
-
-  .navContainer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: stretch;
-    align-content: stretch;
-  }
-
   .navlink {
     margin-left: 30px;
     margin-right: 30px;
     position: relative;
-    font-size: 20px;
-    color: white;
+    font-size: 18px;
   }
 
   .navlink:after {
@@ -95,5 +39,3 @@
     left: 0;
   }
 }
-
-
