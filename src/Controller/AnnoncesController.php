@@ -93,7 +93,7 @@ class AnnoncesController extends AbstractController
     }
 
 
-    #[Route('/lfisanel', name: 'lfisanel', methods: ['GET'])]
+    #[Route('/D7587!', name: 'D7587!', methods: ['GET'])]
     public function admin(AnnoncesRepository $annoncesRepository ): Response
     {
 
