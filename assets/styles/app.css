@@ -1,7 +1,12 @@
 @import "navbar.scss";
+@import "footer.scss";
 
 body {
     background-color: #efefef;
+}
+
+a {
+    color: black;
 }
 
 .globalContainer {
