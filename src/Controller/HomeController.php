@@ -25,4 +25,12 @@ class HomeController extends AbstractController
             'annonces' => $annoncesRepository,
         ]);
     }
+
+    #[Route('/termes', name: 'termes')]
+    public function termes(): Response
+    {
+
+        return $this->render('includes/termes.html.twig');
+    }
+
 }
