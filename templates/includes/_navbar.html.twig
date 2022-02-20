@@ -11,8 +11,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navItems navbar-nav">
 
-                <a class="navlink nav-link" href="{{ path('home') }}">Acceuil</a>
-                <a class="navlink nav-link" href="{{ path('annonces_index') }}">Mes anonces</a>
+                <a class="navlink nav-link" href="{{ path('home') }}">Accueil</a>
+                <a class="navlink nav-link" href="{{ path('annonces_index') }}">Mes annonces</a>
 
                 {% if app.user %}
                     {% if is_granted("ROLE_USER") %}
