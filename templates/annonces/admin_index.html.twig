@@ -10,7 +10,7 @@
             <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
+                <th>Nom</th>
                 <th>Description</th>
                 <th>actions</th>
             </tr>
@@ -22,17 +22,17 @@
                     <td>{{ annonce.name }}</td>
                     <td>{{ annonce.description }}</td>
                     <td>
-                        <a href="{{ path('annonces_edit', {'id': annonce.id}) }}">edit</a>
+                        <a href="{{ path('annonces_edit', {'id': annonce.id}) }}">modifier</a>
                     </td>
                 </tr>
             {% else %}
                 <tr>
-                    <td colspan="4">no records found</td>
+                    <td colspan="4">Aucune annonce</td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
 
-        <a href="{{ path('annonces_new') }}">Create new</a>
+        <a href="{{ path('annonces_new') }}">Créer annonce</a>
     </div>
 {% endblock %}
